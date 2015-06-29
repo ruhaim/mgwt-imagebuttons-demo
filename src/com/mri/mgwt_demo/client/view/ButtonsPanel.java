@@ -1,6 +1,7 @@
 package com.mri.mgwt_demo.client.view;
 
 import com.google.gwt.dom.client.ImageElement;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTML;
@@ -195,18 +196,24 @@ public class ButtonsPanel extends FlexPanel {
 		};
 		
 		BtnResources.INSTANCE.css().ensureInjected();
+		this.addStyleName(BtnResources.INSTANCE.css().flex_flow_wrap());
+		this.setJustification(Justification.START);
+		this.setOrientation(Orientation.HORIZONTAL);
 		for (ImageButtonData imageButtonData : buttonDataArr) {
 			FlexPanel fp = new FlexPanel();
+			fp.setWidth("300px");
 			fp.setOrientation(Orientation.HORIZONTAL);
 			fp.setAlignment(Alignment.CENTER);
 			fp.setJustification(Justification.START);
+			fp.addStyleName(BtnResources.INSTANCE.css().bgBlue());
 
 			Image img = new Image(imageButtonData.imgres);
-			img.setSize("100px", "100px");
+			img.getElement().setAttribute("width", "75");
+			img.getElement().setAttribute("height", "75");
 			fp.add(img);
 
 			FlexPanel fp2 = new FlexPanel();
-			fp2.setAlignment(Alignment.CENTER);
+			fp2.setAlignment(Alignment.START);
 			fp2.setJustification(Justification.START);
 			
 			imageButtonData.imgbtn.setText(imageButtonData.imgres.getName());

@@ -13,5 +13,7 @@ public interface BtnResources extends ClientBundle {
 	  
 	interface MyResources extends CssResource {
 	  String btn();
+	  String flex_flow_wrap();
+	  String bgBlue();
 	}
 }

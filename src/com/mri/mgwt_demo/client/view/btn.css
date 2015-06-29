@@ -1,3 +1,16 @@
 .btn{
- max-width:500px!important;
+ min-width:200px !important;
+}
+.bgBlue{
+ padding:10px 5px;
+ margin:5px
+ 
+}
+.bgBlue:hover{
+ background-color:#BBE1FF;
+ 
+}
+
+.flex_flow_wrap{
+    flex-flow: wrap;
 }
