@@ -6,6 +6,7 @@ import com.google.gwt.resources.client.ImageResource;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Image;
+import com.googlecode.mgwt.ui.client.MGWT;
 import com.googlecode.mgwt.ui.client.widget.button.Button;
 import com.googlecode.mgwt.ui.client.widget.button.ImageButton;
 import com.googlecode.mgwt.ui.client.widget.button.image.*;
@@ -199,6 +200,12 @@ public class ButtonsPanel extends FlexPanel {
 		this.addStyleName(BtnResources.INSTANCE.css().flex_flow_wrap());
 		this.setJustification(Justification.START);
 		this.setOrientation(Orientation.HORIZONTAL);
+		
+		if(MGWT.getFormFactor().isPhone()) {
+			this.setOrientation(Orientation.VERTICAL);
+			this.setJustification(Justification.CENTER);
+		}
+		
 		for (ImageButtonData imageButtonData : buttonDataArr) {
 			FlexPanel fp = new FlexPanel();
 			fp.setWidth("300px");

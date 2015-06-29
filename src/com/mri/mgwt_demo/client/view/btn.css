@@ -12,5 +12,16 @@
 }
 
 .flex_flow_wrap{
-    flex-flow: wrap;
+    	flex-flow: wrap;
 }
+
+@if mgwt.formfactor phone {
+  .flex_flow_wrap{
+    	flex-flow:row nowrap;
+	}
+}@else{
+	.flex_flow_wrap{
+    	flex-flow: wrap;
+	}
+}
+
