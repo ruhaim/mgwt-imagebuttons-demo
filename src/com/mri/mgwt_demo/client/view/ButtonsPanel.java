@@ -200,7 +200,7 @@ public class ButtonsPanel extends FlexPanel {
 		this.addStyleName(BtnResources.INSTANCE.css().flex_flow_wrap());
 		this.setJustification(Justification.START);
 		this.setOrientation(Orientation.HORIZONTAL);
-		
+		FlexPropertyHelper.setFlex(el, flex);
 		if(MGWT.getFormFactor().isPhone()) {
 			this.setOrientation(Orientation.VERTICAL);
 			this.setJustification(Justification.CENTER);
